@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript">
+    	function aud_play_pause() {
+
+    		var myAudio=document.getElementById(arguments[0]);
+    		if(arguments[0]!='myAudio'){
+    			myAudio.volume=0.5;
+    		}
+    		if (myAudio.paused) {
+    			myAudio.play();
+    		}else{
+    			myAudio.pause();
+    		}
+    	}
+    	</script>
+	<link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
+	<title>
+		Music Mood
+	</title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			padding:0px;
+		}
+		.back{
+			width:100%;
+			height: 638px;
+			background-image: url("rain.jpg");
+			}
+		.center{
+			padding-left: 450px;
+			padding-top: 200px;
+			color: white;
+			font-family: 'Marcellus SC', serif;
+
+		}
+		h1{
+			font-size: 80px;
+			font-family: 'Marcellus SC', serif;
+			margin: 0px;			
+		}
+		.sub{
+			font-size: 24px;
+			padding-left: 100px;
+			color: black;
+			font-weight: bold;
+			margin-top: 0px;
+		}
+		#play{
+			padding-left: 180px;
+			width: 60px;
+			height: 60px;
+		}
+		.bottom{
+			
+			background-color:#020017;
+			height: 800px;
+		}
+		.bottomtext{
+			padding-top: 80px;
+			padding-left: 420px;
+			color: white;
+			font-size: 24px;
+			font-family: 'Marcellus SC', serif;
+		}
+		.Welcome{
+			padding-left: 120px;
+		}
+		.use{
+			margin-left:-35px;
+		}
+		.Music{
+			padding-top: 150px;
+			padding-left: 40px;
+		}
+		.as{
+			padding-left: 70px;
+		}
+		.btmimg{
+			width: 80px;
+			height: 80px;
+			
+			padding-left: 60px;
+			padding-right: 50px;
+			padding-top: 10px;
+		}
+		.btmimg1{
+			width: 80px;
+			height: 80px;
+			
+			padding-left: 20px;
+			padding-right: 50px;
+			padding-top: 10px;
+		}
+
+	</style>
+
+</head>
+<body >
+	<div class="back">
+		<div class="center">
+			<h1>Music Mood</h1>
+			<p class="sub">Music Heals Everything</p>
+			<audio id="myAudio" autoplay="autoplay">
+			<source src="0.mp4" type="audio/mpeg" >
+		</audio>
+			<img src="play.png" id="play" onclick="aud_play_pause('myAudio')">
+
+		</div>	
+	</div>
+	<div class="bottom">
+		<div class="bottomtext">
+			<p class="Welcome">Welcome to Music Mood</p>
+			<p>Here You Can Have Wonderful Rain Experience!</p>
+			<p class="use">Use Music Mood While Sleeping,Studying,And Relaxing</p>
+			<div class="Music">
+				<p>Want To Listen Some Music WIth Rain :</p>
+				<p class="as">Click Any Of These Below!</p>
+			</div>
+			<img src="4.png" class="btmimg" onclick="aud_play_pause('kannu')" >
+				<audio id="kannu" loop>
+				<source src="Kannula Munde.mp3" type="audio/mpeg">
+				</audio>
+			<img src="4.png" class="btmimg1">
+			<img src="4.png" class="btmimg1">
+		</div>
+	</div>
+</body>
+</html>
